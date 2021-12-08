@@ -1,0 +1,151 @@
+body
+{
+    background-color: #e2e2e2;
+}
+#titre-1
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+.navigation
+{
+    background-color: #CE0033;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.manage-tache
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.label
+{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    align-content: center;
+    background-color: #ffffff;
+    border: 0.5px solid #b1adad;
+}
+.label #recherche
+{
+    border: none;
+}
+.filtre
+{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    align-content: center; 
+    width: 200px;
+    background-color: #ffffff;
+    border: 0.5px solid #b1adad;
+}
+.ajout-tache
+{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    align-content: center; 
+    width: 200px;  
+    background-color: #ffffff;
+    border: 0.5px solid #b1adad;
+}
+hr
+{
+    background-color: #DEDEDE;
+    border: 2px solid #DEDEDE;
+    margin:20px auto;
+    width: 88%;   
+}
+.etat-tache
+{
+    background-color: #ffffff;
+    border-top: 0.5px solid rgb(167, 165, 165);
+    border-bottom: 0.5px solid rgb(138, 138, 138);
+    height: 50px;
+    display: flex;
+   
+}
+.etat-tache .num-tache
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+  
+}
+.etat-tache .tache-termine
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px; 
+}
+
+.ligne-1-carte-tache
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.carte-tache
+{
+    background-color: #ffffff;
+    padding: 20px 50px  ;
+    border: 0.5px solid #b1adad;
+    border-radius: 12px;
+    
+}
+.lign-1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+.ligne-2
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+.ligne-3
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+.nom-tache 
+{
+    font-weight: bolder;
+}
+#planer
+{
+    width: 30px;
+    height: 30px;
+}
+
+.terminer-2
+{
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.terminer-1
+{
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
