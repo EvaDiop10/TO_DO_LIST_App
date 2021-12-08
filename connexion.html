@@ -24,11 +24,15 @@
                 </div>
                 <img src="img/imgDeco" alt="">
             </div>
-            <div class="connexion">
+            <div class="connexion" >
                 <h1>CONNEXION</h1>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                  </div>
+                <div class="contenteToggle text-center">
+                    <label class="switchConnexion switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label> 
+                    <h5>Inscription</h5>
+                </div>  
                 <p>Si vous êtes déjà membre, connectez-vous facilement.</p>
                 <form action="#">
                     <input type="text" placeholder="Email" class="mail">
@@ -39,11 +43,15 @@
                 <button><img src="img/google.png" alt=""> Connexion avec GOOGLE</button>
                 <a href="#">Mot de passe oublié</a>
             </div>
-            <div class="deconnexion" hidden>
+            <div class="deconnexion"hidden >
                 <h1>INSCRIPTION</h1>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                </div>
+                <div class="contenteToggle text-center">
+                    <label class="switchInscription switch">
+                        <input type="checkbox" checked>
+                        <span class="slider sliderIns round"></span>
+                    </label> 
+                    <h5>Connexion</h5>
+                </div>                 
                 <p>Inscrivez-vous a notre application Todo Liste.</p>
                 <form action="#">
                     <input type="text" placeholder="Nom" class="nom">
@@ -57,7 +65,7 @@
             </div>
         </div>
     </main>
-
+<script src="main.js"></script>
 </body>
 
 </html>
