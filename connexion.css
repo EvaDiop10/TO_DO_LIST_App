@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+*
+{
+    font-family: 'Sen', sans-serif;
+}
+
+/* la decoration */
+body
+{
+    background-color: #FCF7F7;
+}
+.deco
+{
+    width: 535px;
+    height: 861px;
+    background: linear-gradient(159.29deg, rgba(206, 0, 51, 0.92) 1.77%, #3A2B40 98.77%);
+    border-radius: 40px;
+    margin: auto;
+}
+.entete-deco
+{
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 40%;
+}
+.connexion
+{
+    width: 586px;
+    height: 757px;
+    left: 954px;
+    top: 57px;
+    margin: auto;
+}
+.deconnexion
+{
+    width: 586px;
+    height: 757px;
+    left: 954px;
+    top: 57px;
+    margin: auto;
+}
+.mail
+{   
+    height: 56px;
+    left: 40px;
+    top: 191px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    padding-left: 20px;
+}
+.mdp
+{   
+    height: 56px;
+    left: 40px;
+    top: 286px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px; 
+    padding-left: 20px;
+}
+.btn
+{   
+    height: 56px;
+    left: 40px;
+    top: 381px;
+    background: #2F2E41;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    font-size: 26px;
+    color: #FFFFFF;
+}
+input:hover
+{
+    box-shadow: 0px 0px 4px rgba(74, 122, 212, 0.452);
+}
+button:hover
+{
+    box-shadow: 0px 0px 4px rgba(74, 122, 212, 0.521);
+}
+p
+{   
+    width: 515px;
+    height: 24px;
+    left: 40px;
+    top: 137px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+a{  
+    width: 515px;
+    height: 24px;
+    left: 40px;
+    top: 611px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+h1
+{   
+    width: 272px;
+    height: 52px;
+    left: 40px;
+    top: 55px;
+    font-weight: bold;
+    font-size: 43px;
+    color: #CE0033;
+}
+hr
+{   
+    height: 0px;
+    left: 44px;
+    top: 476.5px;
+    border: 1px solid #ACACAC;
+}
+button
+{   
+    height: 56px;
+    left: 40px;
+    top: 516px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+}
+
+
+/* INSCRIPTION */
+
+.nom
+{       
+    width: 480px;
+    height: 56px;
+    left: 37px;
+    padding-left: 20px;
+    top: 220px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+.prenom
+{   
+    width: 480px;
+    height: 56px;
+    padding-left: 20px;
+    left: 37px;
+    top: 296px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+.mailIns
+{   
+    width: 480px;
+    height: 56px;
+    padding-left: 20px;
+    left: 37px;
+    top: 372px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+.mdpIns
+{   
+    width: 480px;
+    height: 56px;
+    left: 37px;
+    padding-left: 20px;
+    top: 448px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+.mdpConf
+{   
+    width: 480px;
+    height: 56px;
+    left: 37px;
+    padding-left: 20px;
+    top: 524px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+.date
+{   
+    width: 480px;
+    height: 56px;
+    left: 38px;
+    padding-left: 20px;
+    top: 599px;
+    background: #FFFFFF;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+.btnIns
+{   
+    width: 480px;
+    height: 56px;
+    left: 37px;
+    padding-left: 20px;
+    top: 674px;
+    background: #2F2E41;
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
+    border-radius: 14px;
+    font-size: 26px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+
+
+
+/* togller */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider { 
+      position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3F3D56;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {  
+      position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: -22px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .sliderIns:before {   
+      position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #3F3D56;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #3F3D56;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .contenteToggle
+  { 
+    position: relative;
+    width: 93px;
+    height: 35px;
+    margin-left: 400px;
+    margin-top: -60px;
+  }
+  .donnee
+  {
+      margin: auto;
+  }
+  @media screen and (max-width:900px) {
+      input
+      {
+          width: 200px;
+      }
+  }
