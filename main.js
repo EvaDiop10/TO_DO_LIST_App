@@ -1,5 +1,5 @@
 // connexion et deconnexion
-
+// =========================================
 const cnx = document.querySelector('.connexion');
 const deCnx = document.querySelector('.deconnexion');
 
@@ -18,22 +18,39 @@ togglerBtnIns.addEventListener('click', (e) =>{
         deCnx.hidden = true;
 })
 
+
 // Recureration des donnees de la connexion
+// =========================================
+var donneesConx =  {
+    mail : "" ,
+    password : ""
+}
 
-const email = document.querySelector('.mail');
-const motDePasse = document.querySelector('.mdp');
-
-
-
-
-
-
-
-
-
-
+function validationConnexion(e){
+    donneesConx.mail = document.querySelector('.mail').value;
+    donneesConx.password = document.querySelector('.mdp').value;
+    console.log(donneesConx)
+}
 
 
+// Recureration des donnees de la deconnexion
+// =========================================
+var donneesConx =  {
+    nom : "" ,
+    prenom : "" ,
+    mail : "" ,
+    password : "",
+    dateNais : "" 
+}
+
+function validationDeconnexion(e){
+    donneesConx.nom = document.querySelector('.nom').value;
+    donneesConx.prenom = document.querySelector('.prenom').value;
+    donneesConx.mail = document.querySelector('.mailIns').value;
+    donneesConx.password = document.querySelector('.mdpIns').value;
+    donneesConx.dateNais = document.querySelector('.date').value;
+    console.log(donneesConx)
+}
 
 
 
@@ -48,6 +65,16 @@ const motDePasse = document.querySelector('.mdp');
 
 
 
+
+
+
+
+
+
+
+
+
+// // Fonction validation mot de passe
 // function validate() { 
 //     var msg; 
 //     var str = document.getElementById("mdp").value; 

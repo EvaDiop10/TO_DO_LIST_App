@@ -40,7 +40,7 @@
                         <h5>Inscription</h5>
                     </div> <br> 
                     <p class="pt-5">Si vous êtes déjà membre, connectez-vous facilement.</p>
-                    <form action="#">
+                    <form action="#" onsubmit = "return validationConnexion()">
                         <input type="email" placeholder="Email" class="mail mt-4 w-100" required>
                         <input type="password" placeholder="Mot de passe" class="mdp mt-4 w-100" required>
                         <input type="submit" value="CONNEXION" class="btn mt-4 w-100" required>
@@ -59,7 +59,7 @@
                         <h5>Connexion</h5>
                     </div>                 
                     <p class="mt-5">Inscrivez-vous a notre application Todo Liste.</p>
-                    <form action="#">
+                    <form action="#" onsubmit = "return validationDeconnexion()">
                         <input type="text" placeholder="Nom" class="w-100 nom" required>
                         <input type="text" placeholder="Prenom" class="w-100 prenom" required>
                         <input type="email" placeholder="Email" class="w-100 mailIns" required>
