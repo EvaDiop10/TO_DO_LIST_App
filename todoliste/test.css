@@ -1,6 +1,12 @@
 body
 {
-    background-color: #e2e2e2;
+    background-color: #f3f3f3df;
+    
+}
+main{
+    margin: 0 auto;
+    width: 80%;
+    padding: 50px;
 }
 #titre-1
 {
@@ -24,14 +30,14 @@ body
 }
 .label
 {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid;
     border-radius: 10px;
     width: 400px;
     height: 50px;
     align-content: center;
     background-color: #ffffff;
-    border: 0.5px solid #b1adad;
+    border: 0.5px solid #b1adada8;
 }
 .label #recherche
 {
@@ -40,12 +46,14 @@ body
 .filtre
 {
     padding: 10px;
+    padding-left: 40px;
+    padding-right: -12px;
     border: 1px solid;
     border-radius: 10px;
     align-content: center; 
     width: 200px;
     background-color: #ffffff;
-    border: 0.5px solid #b1adad;
+    border: 0.5px solid #b1adadab;
 }
 .ajout-tache
 {
@@ -55,20 +63,22 @@ body
     align-content: center; 
     width: 200px;  
     background-color: #ffffff;
-    border: 0.5px solid #b1adad;
+    border: 0.5px solid #b1adad94;
+    background-color:#CE0033;
+    color: #ffffff;
 }
 hr
 {
     background-color: #DEDEDE;
     border: 2px solid #DEDEDE;
-    margin:20px auto;
+    margin:40px auto;
     width: 88%;   
 }
 .etat-tache
 {
     background-color: #ffffff;
-    border-top: 0.5px solid rgb(167, 165, 165);
-    border-bottom: 0.5px solid rgb(138, 138, 138);
+    border-top: 0.5px solid rgba(184, 181, 181, 0.685);
+    border-bottom: 0.5px solid rgba(179, 176, 176, 0.623);
     height: 50px;
     display: flex;
    
@@ -100,7 +110,7 @@ hr
 {
     background-color: #ffffff;
     padding: 20px 50px  ;
-    border: 0.5px solid #b1adad;
+    border: 0.5px solid #e9e7e7;
     border-radius: 12px;
     
 }
