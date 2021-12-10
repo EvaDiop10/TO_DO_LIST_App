@@ -2,28 +2,6 @@
 
 
 
-var  donnees = {
-    titre : "",
-    datefin : "",
-    description : ""
-}
-
- 
-     
-     const enregistrer = document.getElementById("enregistre"); 
-    
-
-function enregistrerClicked(e){
-    e.preventDefault();
-
-    donnees = document.querySelector(".titre-tache").value;
-     donnees = document.querySelector(".date-fin").value;
-     donnees = document.querySelector(".description").value;
-
-    console.log(donnees)
-  
-}
-enregistrer.addEventListener("click", enregistrerClicked);
 
 /* let nouvelleTache = {};
 
