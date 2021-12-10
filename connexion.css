@@ -11,13 +11,11 @@ body
 }
 .deco
 {
-    position: absolute;
     width: 535px;
     height: 861px;
-    left: 260px;
-    top: 19px;
     background: linear-gradient(159.29deg, rgba(206, 0, 51, 0.92) 1.77%, #3A2B40 98.77%);
     border-radius: 40px;
+    margin: auto;
 }
 .entete-deco
 {
@@ -27,24 +25,22 @@ body
 }
 .connexion
 {
-    position: absolute;
-    width: 786px;
-    height: 757px;
-    left: 954px;
-    top: 57px;
-}
-.deconnexion
-{
-    position: absolute;
     width: 586px;
     height: 757px;
     left: 954px;
     top: 57px;
+    margin: auto;
+}
+.deconnexion
+{
+    width: 586px;
+    height: 757px;
+    left: 954px;
+    top: 57px;
+    margin: auto;
 }
 .mail
-{
-    position: absolute;
-    width: 505px;
+{   
     height: 56px;
     left: 40px;
     top: 191px;
@@ -54,12 +50,9 @@ body
     box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
     border-radius: 14px;
     padding-left: 20px;
-    padding-left: 20px;
 }
 .mdp
-{
-    position: absolute;
-    width: 505px;
+{   
     height: 56px;
     left: 40px;
     top: 286px;
@@ -71,9 +64,7 @@ body
     padding-left: 20px;
 }
 .btn
-{
-    position: absolute;
-    width: 505px;
+{   
     height: 56px;
     left: 40px;
     top: 381px;
@@ -94,8 +85,7 @@ button:hover
     box-shadow: 0px 0px 4px rgba(74, 122, 212, 0.521);
 }
 p
-{
-    position: absolute;
+{   
     width: 515px;
     height: 24px;
     left: 40px;
@@ -104,8 +94,7 @@ p
     line-height: 24px;
     color: #000000;
 }
-a{
-    position: absolute;
+a{  
     width: 515px;
     height: 24px;
     left: 40px;
@@ -115,8 +104,7 @@ a{
     color: #000000;
 }
 h1
-{
-    position: absolute;
+{   
     width: 272px;
     height: 52px;
     left: 40px;
@@ -126,18 +114,14 @@ h1
     color: #CE0033;
 }
 hr
-{
-    position: absolute;
-    width: 505px;
+{   
     height: 0px;
     left: 44px;
     top: 476.5px;
     border: 1px solid #ACACAC;
 }
 button
-{
-    position: absolute;
-    width: 505px;
+{   
     height: 56px;
     left: 40px;
     top: 516px;
@@ -152,8 +136,7 @@ button
 /* INSCRIPTION */
 
 .nom
-{   
-    position: absolute;
+{       
     width: 480px;
     height: 56px;
     left: 37px;
@@ -164,10 +147,10 @@ button
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
     border-radius: 14px;
+    margin-top: 20px;
 }
 .prenom
-{
-    position: absolute;
+{   
     width: 480px;
     height: 56px;
     padding-left: 20px;
@@ -178,10 +161,10 @@ button
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
     border-radius: 14px;
+    margin-top: 20px;
 }
 .mailIns
-{
-    position: absolute;
+{   
     width: 480px;
     height: 56px;
     padding-left: 20px;
@@ -192,10 +175,10 @@ button
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
     border-radius: 14px;
+    margin-top: 20px;
 }
 .mdpIns
-{
-    position: absolute;
+{   
     width: 480px;
     height: 56px;
     left: 37px;
@@ -206,10 +189,10 @@ button
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
     border-radius: 14px;
+    margin-top: 20px;
 }
 .mdpConf
-{
-    position: absolute;
+{   
     width: 480px;
     height: 56px;
     left: 37px;
@@ -220,10 +203,10 @@ button
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
     border-radius: 14px;
+    margin-top: 20px;
 }
 .date
-{
-    position: absolute;
+{   
     width: 480px;
     height: 56px;
     left: 38px;
@@ -234,10 +217,10 @@ button
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(176, 176, 176, 0.25);
     border-radius: 14px;
+    margin-top: 20px;
 }
 .btnIns
-{
-    position: absolute;
+{   
     width: 480px;
     height: 56px;
     left: 37px;
@@ -250,6 +233,7 @@ button
     border-radius: 14px;
     font-size: 26px;
     color: #FFFFFF;
+    margin-top: 20px;
 }
 
 
@@ -262,7 +246,6 @@ button
     display: inline-block;
     width: 60px;
     height: 34px;
-
   }
   
   .switch input { 
@@ -271,8 +254,8 @@ button
     height: 0;
   }
   
-  .slider {
-    position: absolute;
+  .slider { 
+      position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
@@ -282,24 +265,24 @@ button
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
-  .slider:before {
-    position: absolute;
+
+  .slider:before {  
+      position: absolute;
     content: "";
     height: 26px;
     width: 26px;
-    left: 4px;
+    left: -22px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
   }
-  .sliderIns:before {
-    position: absolute;
+  .sliderIns:before {   
+      position: absolute;
     content: "";
     height: 26px;
     width: 26px;
-    left: 30px;
+    left: 4px;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
@@ -329,10 +312,20 @@ button
     border-radius: 50%;
   }
   .contenteToggle
-  {
-    position: absolute;
+  { 
+    position: relative;
     width: 93px;
     height: 35px;
-    left: 409px;
-    top: 61px;
+    margin-left: 400px;
+    margin-top: -60px;
+  }
+  .donnee
+  {
+      margin: auto;
+  }
+  @media screen and (max-width:900px) {
+      input
+      {
+          width: 200px;
+      }
   }
