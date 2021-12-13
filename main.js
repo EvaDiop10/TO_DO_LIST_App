@@ -1,3 +1,4 @@
+
 // connexion et deconnexion
 
 const cnx = document.querySelector('.connexion');
@@ -22,6 +23,8 @@ togglerBtnIns.addEventListener('click', (e) =>{
 
 const email = document.querySelector('.mail');
 const motDePasse = document.querySelector('.mdp');
+
+
 
 
 
