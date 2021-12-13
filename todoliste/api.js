@@ -27,8 +27,10 @@
         return
     }
     if(formulaire.hidden== false){
-        formulaire.hidden= true
+  
+        formulaire.hidden= true 
         return
+
     }
     })
 
