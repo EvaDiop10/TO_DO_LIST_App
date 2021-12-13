@@ -8,7 +8,7 @@ const firebaseConfig = {
     messagingSenderId: "390307695034",
     appId: "1:390307695034:web:86dee873f6c067272af583"
   };
-                
+          firebase.initializeApp(firebaseConfig)      
 //afficher formulaire
 
 let formulaire =document.querySelector(".form-ajout");
@@ -27,13 +27,6 @@ ajouter.addEventListener('click', (e)=>{
   }
 })
 
-//Referencer la collection dans firebase
-  
-/* const app = initializeApp(firebaseConfig);
-const db = getFirestore(app)
-
-var tacheRef = db.database().ref('tache');
- */
 
 
 
@@ -64,9 +57,8 @@ function recupererChamps(id){
 
 //fonction pour enregistrer la tache dans firebase
 
-function enregistrerDonnee(titre, date, description){
-    tacher
-}
+var tacheRef = firebase.database().ref("tache");
+
 
 
 
@@ -79,11 +71,19 @@ function enregistrerDonnee(titre, date, description){
 
 function enregistreTache(titre, date, description){
 
-var nouvelleTacheRef = {
+    var nouvelleTacheRef = tacheRef.push();
+
+    nouvelleTacheRef.set({
+        titre:titre,
+        date:date,
+        description:description
+    });
+
+/* var nouvelleTacheRef = {
     titre : titre,
     date : date, 
     description :  description
-}
+} */
 console.log(nouvelleTacheRef)
 }
 
