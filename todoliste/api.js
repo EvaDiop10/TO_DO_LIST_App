@@ -10,10 +10,7 @@
     };
             
     firebase.initializeApp(firebaseConfig) 
-
-
-            
-                
+S                
     //afficher formulaire
 
     let formulaire =document.querySelector(".form-ajout");
