@@ -1,4 +1,4 @@
-
+/* /* 
 let formulaire =document.querySelector(".form-ajout");
 
 let ajouter = document.querySelector(".ajout-tache");
@@ -27,14 +27,19 @@ var  donnees = {
    const enregistrer = document.getElementById("enregistre"); 
   
 
-function enregistrerClicked(e){
-  e.preventDefault();
+  enregistrer.addEventListener("click", enregistrerClicked);
 
-  donnees.titre = document.querySelector(".titre-tache").value;
+function enregistrerClicked(){
+  /* e.preventDefault(); */
+
+  /* donnees.titre = document.querySelector(".titre-tache").value;
    donnees.datefin = document.querySelector(".date-fin").value;
    donnees.description = document.querySelector(".description").value;
+ 
 
-  console.log(donnees)
 
-}
-enregistrer.addEventListener("click", enregistrerClicked);
+
+  let taches = document.createElement("div");
+
+  taches.innerHTML = ``
+ */
