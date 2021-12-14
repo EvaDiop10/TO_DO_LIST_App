@@ -1,6 +1,16 @@
+
+
 let formulaire =document.querySelector(".form-ajout");
 
 let ajouter = document.querySelector(".ajout-tache");
+
+let API_Url = "https://bmpiqremuvqolvmpvpfz.supabase.co";
+
+let API_Key =
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTA0MzE4OCwiZXhwIjoxOTU0NjE5MTg4fQ.fmJNY-6CG7UhTDb_ImLRI96RGSEc46oJ43bbYAjVOoE";
+
+const supabase = createClient(API_Url, API_Key);
+
 
 ajouter.addEventListener('click', (e)=>{
   e.preventDefault;
@@ -15,11 +25,8 @@ ajouter.addEventListener('click', (e)=>{
 })
 
 
-var  donnees = {
-  titre : "",
-  datefin : "",
-  description : ""
-}
+
+
 
 
    
@@ -37,3 +44,21 @@ function enregistrerClicked(e){
 
 }
 enregistrer.addEventListener("click", enregistrerClicked);
+
+import { createClient } from "@supabase/supabase-js";
+
+
+
+
+//function(){
+    //valider les donnee
+    //soumettre
+//}
+  // supabase
+  // .from("liste")
+  // .select()
+  // .then((data) => {
+  //   document.write(data.body.titre);
+  // });
+ 
+  

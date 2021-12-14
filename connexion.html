@@ -15,57 +15,81 @@
 
 <body>
 
-    <main class="cotainer-fluid">
+    <main class="container-fluid">
         <!-- La decoration de gauche -->
-        <div class="contenu d-flex justify-content-evenly">
-            <div class="deco">
-                <div class="entete-deco">
-                    <img src="img/logo.png" alt=""> <samp>Todo liste SIMPLON</samp>
+        <div class="row contenu">
+            <div class="col-lg-6 text-center d-none d-lg-inline">
+                <div class="deco mt-4">
+                    <div class="entete-deco">
+                        <img src="img/logo.png" alt=""> <samp>Todo liste SIMPLON</samp>
+                    </div>
+                    <img src="img/imgDeco" alt="">
                 </div>
-                <img src="img/imgDeco" alt="">
             </div>
-            <div class="connexion" >
-                <h1>CONNEXION</h1>
-                <div class="contenteToggle text-center">
-                    <label class="switchConnexion switch">
-                        <input type="checkbox" checked>
-                        <span class="slider round"></span>
-                    </label> 
-                    <h5>Inscription</h5>
-                </div>  
-                <p>Si vous êtes déjà membre, connectez-vous facilement.</p>
-                <form action="#">
-                    <input type="text" placeholder="Email" class="mail">
-                    <input type="password" placeholder="Mot de passe" class="mdp">
-                    <input type="submit" value="CONNEXION" class="btn">
-                </form>
-                <hr>
-                <button><img src="img/google.png" alt=""> Connexion avec GOOGLE</button>
-                <a href="#">Mot de passe oublié</a>
+            <div class="col-12 text-center d-lg-none d-inline">
+                <img src="img/logo.png" alt=""> <samp>Todo liste SIMPLON</samp>
             </div>
-            <div class="deconnexion"hidden >
-                <h1>INSCRIPTION</h1>
-                <div class="contenteToggle text-center">
-                    <label class="switchInscription switch">
-                        <input type="checkbox" checked>
-                        <span class="slider sliderIns round"></span>
-                    </label> 
-                    <h5>Connexion</h5>
-                </div>                 
-                <p>Inscrivez-vous a notre application Todo Liste.</p>
-                <form action="#">
-                    <input type="text" placeholder="Nom" class="nom">
-                    <input type="text" placeholder="Prenom" class="prenom">
-                    <input type="text" placeholder="Email" class="mailIns">
-                    <input type="password" placeholder="Mot de passe" class="mdpIns">
-                    <input type="password" placeholder="Confirme mot de passe" class="mdpConf">
-                    <input type="date" placeholder="date" class="date">
-                    <input type="submit" value="Inscription" class="btnIns">
-                </form>
+            <div class="col-lg-6 donnee mx-auto">
+                <div class="connexion pt-5" >
+                    <h1>CONNEXION</h1>
+                    <div class="contenteToggle text-center">
+                        <label class="switchConnexion switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label> 
+                        <h5>Inscription</h5>
+                    </div> <br> 
+                    <p class="pt-5">Si vous êtes déjà membre, connectez-vous facilement.</p>
+                    <form action="#" onsubmit = "return validationConnexion()">
+                        <input type="email" placeholder="Email" class="mail mt-4 w-100" required>
+                        <input type="password" placeholder="Mot de passe" class="mdp mt-4 w-100" required>
+                        <input type="submit" value="CONNEXION" class="btn mt-4 w-100" required>
+                    </form>
+                    <hr class="mt-5">
+                    <button class="mt-3 w-100"><img src="img/google.png" alt=""> Connexion avec GOOGLE</button><br><br>
+                    <a href="#" class="mt-5">Mot de passe oublié</a>
+                </div>
+                <div class="deconnexion pt-5 mx-auto" hidden >
+                    <h1>INSCRIPTION</h1>
+                    <div class="contenteToggle text-center">
+                        <label class="switchInscription switch pb-4">
+                            <input type="checkbox" checked>
+                            <span class="slider sliderIns round"></span>
+                        </label> 
+                        <h5>Connexion</h5>
+                    </div>                 
+                    <p class="mt-5">Inscrivez-vous a notre application Todo Liste.</p>
+                    <form action="#" onsubmit = "return validationDeconnexion()">
+                        <input type="text" placeholder="Nom" class="w-100 nom" required value="nom">
+                        <input type="text" placeholder="Prenom" class="w-100 prenom" required>
+                        <input type="email" placeholder="Email" class="w-100 mailIns" required>
+                        <input type="password" placeholder="Mot de passe" class="w-100 mdpIns" required>
+                        <input type="password" placeholder="Confirme mot de passe" class="w-100 mdpConf" required>
+                        <input type="date" placeholder="date" class="w-100 date" required>
+                        <input type="submit" value="Inscription" class="w-100 btnIns" required>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
-<script src="main.js"></script>
+<script src="connexion.js"></script>
+<script>
+
+    let togglerBtnCnx = document.querySelector('.switchConnexion');
+    let togglerBtnIns = document.querySelector('.switchInscription');
+    let API_Url = "https://bmpiqremuvqolvmpvpfz.supabase.co";
+    let API_Key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTA0MzE4OCwiZXhwIjoxOTU0NjE5MTg4fQ.fmJNY-6CG7UhTDb_ImLRI96RGSEc46oJ43bbYAjVOoE";
+    const supabase = createClient(API_Url, API_Key);
+    supabase
+    .from("user")
+    .select()
+    .then((data) => {
+        document.write(data.body.nom);
+    });
+
+</script>
+<script src="https://unpkg.com/@supabase/supabase-js"></script>
 </body>
 
 </html>
