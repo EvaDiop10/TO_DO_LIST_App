@@ -62,9 +62,9 @@
       <div class="mb-3">
         <label for="priorite"  lass="form-label">Priorité</label> <br>
         <select name="priorite" id="priorite">
-            <option value="important">faible</option>
-            <option value="important">moyenne</option>
-            <option value="important">haute</option>
+            <option value="faible" id="priorite1">faible</option>
+            <option value="moyenne" id="priorite2">moyenne</option>
+            <option value="haute" id="priorite3">haute</option>
         </select>
       </div>
     <input type="submit" id="enregistre" class="btn soummir mt-4">
@@ -87,20 +87,19 @@
         </section>
         <section class="affiche-taches">
             <div class="ligne-1-carte-tache">
-                <div class="carte-tache">
-                    
+                <div class="carte-tache">   
                     <div class="lign-1">
-                        <div class="date">
+                        <div class="date" id="dates">
                             <img src="img/planner.png" alt="" id="planer">
-                            <span id="date">07/dec/2021, 12h30 </span>
+                        
                         </div>
-                        <div>
+                        <div id="priorite-couleur">
                             <img src="img/rouge.png" alt="">
                         </div>
-                      </div>
+                    </div>
                       <hr id="trait-carte">
                       <div class="ligne-2">
-                        <div class="nom-tache">
+                        <div class="nom-tache" id="nom-tache">
                             <span>Brief Algorithme</span>
                         </div>
                         <div class="tache-en-cour">
