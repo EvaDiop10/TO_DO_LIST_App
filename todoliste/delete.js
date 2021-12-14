@@ -18,7 +18,6 @@ for(let j=0; j<= BtnDelete.length; j++){
         // console.log(carte)
         // DeleteTaskOnSupabase(103)
        
-       
     })
 }
     function DeleteTaskOnSupabase(taskId){

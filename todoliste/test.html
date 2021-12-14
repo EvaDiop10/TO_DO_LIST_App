@@ -28,59 +28,63 @@
         </nav>
     </header>
     <main>
-        <section class="detail-taches">
-            <div class="manage-tache">
-                <div class="label shadow">
-                    <label for="recherche">
-                        <img src="img/loup.png" alt="" id="search">
-                        <input type="search" name="recherche" id="recherche" placeholder="Recherche par titre">
-                    </label>
-                </div>
-                <div class="filtre shadow">
-                    <img src="img/filtre.png" alt=""">
-                    <span>Filtre</span>
-                </div>
-                <button class="ajout-tache shadow" id="ajout" >
-                    <img src="img/tache.png" alt="">
-                    <span>Ajouter tâche</span>
-                </button>
-            </div>
-            <hr>
-<!----------------------partie form ajouter tache------------------>
-            <form class="pb-5 form-ajout" hidden id="myForm">
-                <div class="mb-3">
-                    <label for="tacheTitre" class="form-label">Titre de la tache</label>
-                    <input type="text" class="form-control titre-tache" id="titre" aria-describedby="textlHelp">
-                    <div id="textelHelp" class="form-text">Je prévoie faire:</div>
-                </div>
-                <div class="mb-3">
-                    <label for="dateFin"  lass="form-label">Je dois le terminer avant le</label>
-                    <input type="datetime-local"  class="form-control date-fin" id="date">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">je confirme</label>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">description</label>
-                    <textarea class="form-control description"   id="description" rows="3"></textarea>
-                </div>
-                <input type="submit" id="enregistre" class="btn btn-danger">
-            </form>
+        <section id="ma-section"></section>
 
-  <!---------------fffffffffffffffffffff-------------------------->
+            <section class="detail-taches">
+                <div class="manage-tache">
+                    <div class="label shadow">
+                        <label for="recherche">
+                            <img src="img/loup.png" alt="" id="search">
+                            <input type="search" name="recherche" id="recherche" placeholder="Recherche par titre">
+                        </label>
+                    </div>
+                    <div class="filtre shadow">
+                        <img src="img/filtre.png" alt=""">
+                        <span>Filtre</span>
+                    </div>
+                    <button class="ajout-tache shadow" id="ajout" >
+                        <img src="img/tache.png" alt="">
+                        <span>Ajouter tâche</span>
+                    </button>
+                </div>
+                <hr>
+    <!----------------------partie form ajouter tache------------------>
+                <form class="pb-5 form-ajout" hidden id="myForm">
+                    <div class="mb-3">
+                        <label for="tacheTitre" class="form-label">Titre de la tache</label>
+                        <input type="text" class="form-control titre-tache" id="titre" aria-describedby="textlHelp">
+                        <div id="textelHelp" class="form-text">Je prévoie faire:</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dateFin"  lass="form-label">Je dois le terminer avant le</label>
+                        <input type="datetime-local"  class="form-control date-fin" id="date">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">je confirme</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">description</label>
+                        <textarea class="form-control description"   id="description" rows="3"></textarea>
+                    </div>
+                    <input type="submit" id="enregistre" class="btn btn-danger">
+                </form>
+    
+      <!---------------fffffffffffffffffffff-------------------------->
+    
+                <div class="etat-tache">
+                    <div class="num-tache">
+                        <img src="img/iconeTache.png" alt="">
+                        <span id="nbr-taches">25 tâches</span>
+                    </div>
+                    <div class="tache-termine">
+                        <img src="img/iconeTermine.png" alt="">
+                        <span id="tache-terminer">3 terminés</span>
+                    </div>
+                </div>
+            </section>
 
-            <div class="etat-tache">
-                <div class="num-tache">
-                    <img src="img/iconeTache.png" alt="">
-                    <span id="nbr-taches">25 tâches</span>
-                </div>
-                <div class="tache-termine">
-                    <img src="img/iconeTermine.png" alt="">
-                    <span id="tache-terminer">3 terminés</span>
-                </div>
-            </div>
-        </section>
+            <script type="text/html"></script>
         <section class="affiche-taches">
             <div class="ligne-1-carte-tache">
                 <div class="carte-tache tache-0" id="1">
