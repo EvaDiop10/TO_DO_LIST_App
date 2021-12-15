@@ -97,13 +97,14 @@ hr
     padding-top: 7px; 
 }
 
-.ligne-1-carte-tache
+.affiche-taches
 {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 
 .carte-tache
@@ -112,6 +113,7 @@ hr
     padding: 20px 50px  ;
     border: 0.5px solid #e9e7e7;
     border-radius: 12px;
+    margin-bottom: 10px;
     
 }
 .lign-1
@@ -187,4 +189,10 @@ hr
     background-color: #ffffff;
     padding: 8px;
     border-radius: 8px;
+}
+#descpar
+{
+    padding: 10px;
+    text-align: justify;
+    text-justify: auto;
 }
