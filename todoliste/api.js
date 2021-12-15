@@ -74,3 +74,25 @@ return donnees
 
  //creer l'element qui contient la description
  descriptions.innerHTML =  data.data[j].descriptions; */
+
+
+ ////
+
+ const titres = recupererChamps("titre-content");
+const dates = recupererChamps("date-content");
+const descriptions = recupererChamps("desc-tache");
+
+ //creer l'element qui contient la date
+ var newDate = document.createElement("span");
+ newDate.setAttribute("id", "date");
+ dates.innerHTML =  data.data[j].echeance;
+ dates.appendChild("span")
+
+//creer l'element qui contient le titre
+ var newTitre = document.createElement("span");
+ newTitre.setAttribute("id", "nom-tache")
+ titres.innerHTML = data.data[j].titre;
+ titres.appendChild("span")
+
+//creer l'element qui contient la description
+descriptions.innerHTML =  data.data[j].descriptions; 

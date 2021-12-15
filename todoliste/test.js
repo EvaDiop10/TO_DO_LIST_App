@@ -8,18 +8,13 @@ supabase = supabase.createClient(api_url, api_key);
   supabase
   .from('Todo')
   .select()
-  .then((data) =>{
-      for(let i=0; i <= data.data.length; i++){
-       
-        
-        affichecarte(data, i);
-       
-        
-        
-        // 
+  .then((data ) =>{
+      for(let i=0; i <= data.body.length; i++){ 
+        affichecarte();
+         
        }
-      
   })
+
 })();
 
 
@@ -30,37 +25,37 @@ function recupererChamps(id){
 
   return document.getElementById(id).value; 
 }
-const titres =  document.getElementById("titre-content");
-const dates = document.getElementById("date-content");
-const descriptions = document.getElementById("desc-tache");
+
 
 
   //fonction template creation cartes
 
-  function affichecarte(data, j ){
+  function affichecarte(){
     var container = document.getElementById("section")
     var temp = document.getElementsByTagName("template")[0];
     var clone = temp.content.cloneNode(true);
     container.appendChild(clone);
+
+   
+
+    //remmetrre le titre 
+   
+    }
+    function dataTemplate(titreTache, dateTache, descTache){
+
+      
+      document.querySelectorAll("nom-tache").innerHTML= titreTache;
+      document.querySelectorAll("date").innerHTML= dateTache;
+      document.querySelectorAll("desc-tache").innerHTML =descTache ; 
+    }
+
+    
     
     
     
 
- //creer l'element qui contient la date
-   var newDate = document.createElement("span");
-   newDate.setAttribute("id", "date");
-   dates.innerHTML =  data.data[j].echeance;
-   dates.appendChild("span")
-
- //creer l'element qui contient le titre
-   var newTitre = document.createElement("span");
-   newTitre.setAttribute("id", "nom-tache")
-   titres.innerHTML = data.data[j].titre;
-   titres.appendChild("span")
-
- //creer l'element qui contient la description
- descriptions.innerHTML =  data.data[j].descriptions; */
-  };
+ 
+  
 
 
 
