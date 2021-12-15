@@ -1,4 +1,4 @@
-/* let formulaire =document.querySelector(".form-ajout");
+/* /* let formulaire =document.querySelector(".form-ajout");
 
 let ajouter = document.querySelector(".ajout-tache");
 
@@ -63,14 +63,14 @@ return donnees
  //creer l'element qui contient la date
    var newDate = document.createElement("span");
    newDate.setAttribute("id", "date");
-   dates.innerHTML =  data.echeance;
+   dates.innerHTML =  data.data[j].echeance;
    dates.appendChild("span")
 
  //creer l'element qui contient le titre
    var newTitre = document.createElement("span");
    newTitre.setAttribute("id", "nom-tache")
-   titres.innerHTML = data.titre;
+   titres.innerHTML = data.data[j].titre;
    titres.appendChild("span")
 
  //creer l'element qui contient la description
- descriptions.innerHTML =  data.description;
+ descriptions.innerHTML =  data.data[j].descriptions; */
