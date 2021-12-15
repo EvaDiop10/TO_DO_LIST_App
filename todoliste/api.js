@@ -1,4 +1,4 @@
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+/*     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 
     const firebaseConfig = {
         apiKey: "AIzaSyCrm4Pr07g_CoQY2E7PwOL_e6WYIkvc4LQ",
@@ -24,8 +24,10 @@ S
         return
     }
     if(formulaire.hidden== false){
-        formulaire.hidden= true
+  
+        formulaire.hidden= true 
         return
+
     }
     })
 
@@ -91,13 +93,13 @@ S
 
 
 
-    }
+   /*  } */
 
     //recuprer les donnees
 
-    function recupererdonnees(titre, date, description){
+ /*  function recupererdonnees(titre, date, description){
         var tacheRecuperer = tacheRef.ref();
         tacheRecuperer.get(tacheRef)
         console.log(tacheRef)
-    }
+    } */
 

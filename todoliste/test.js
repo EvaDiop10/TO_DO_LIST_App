@@ -1,4 +1,4 @@
-/* /* 
+
 let formulaire =document.querySelector(".form-ajout");
 
 let ajouter = document.querySelector(".ajout-tache");
@@ -15,59 +15,79 @@ ajouter.addEventListener('click', (e)=>{
   }
 })
 
+  
 
-var  donnees = {
-  titre : "",
-  datefin : "",
-  description : ""
+
+    //form submit  callback
+    document.getElementById('myForm').addEventListener('submit', sauvegarder)
+
+    function sauvegarder(e){
+        e.preventDefault()
+
+        //recuperer valeur champs
+
+        var titre = recupererChamps('titre');
+        var date = recupererChamps('date');
+        var description = recupererChamps('description');
+        
+
+        enregistreTache(titre, date, description,);
+        creerElements(date);
+
+        formulaire.reset();
+ 
+    }
+
+
+
+    // fonction pour recuperer id des champs 
+
+    function recupererChamps(id){
+
+        return document.getElementById(id).value; 
+    }
+
+
+    // fonction pour recuperer les valeurs avec notre objet
+
+    function enregistreTache(titre, date, description,){
+     
+      var nouvelleTache = {
+            titre : titre,
+            date : date, 
+            description :  description,
+        } 
+
+       /*  localStorage.setItem('laNouvelleTache', JSON.stringify(nouvelleTache)); */
+
+        console.log(nouvelleTache)  
+   } 
+
+//founction pour recuperer la priorite
+
+
+
+//création des elements de la cartes a partir des données 
+
+function creerElements(date){
+ /*  var cartesTaches = recupererChamps ("carte-tache"); */
+  /* var prioriteCouleurs = recupererChamps("priorite-couleur");
+  var nomTaches = recupererChamps("nom-tache");
+  var descTaches = recupererChamps("desc-tache")
+ */
+  //creer l'element qui contient la date
+  var dates = recupererChamps("date");
+  var date = document.createElement("span");
+  date.setAttribute("id", "date");
+  date.textContent= "datega";
+  dates.appendChild(date);
+ 
+
 }
 
 
-   
-   const enregistrer = document.getElementById("enregistre"); 
-  
-
-  enregistrer.addEventListener("click", enregistrerClicked);
-
-function enregistrerClicked(){
-  /* e.preventDefault(); */
-
-  /* donnees.titre = document.querySelector(".titre-tache").value;
-   donnees.datefin = document.querySelector(".date-fin").value;
-   donnees.description = document.querySelector(".description").value;
- 
 
 
-
-  let taches = document.createElement("div");
-
-  taches.innerHTML = `<div class="lign-1">
-  <div class="date">
-      <img src="img/planner.png" alt="" id="planer">
-      <span id="date">${donnees.datefin} </span>
-  </div>
-  <div>
-      <img src="img/rouge.png" alt="">
-  </div>
-</div>
-<hr id="trait-carte">
-<div class="ligne-2">
-  <div class="nom-tache">
-      <span>${donnees.titre}</span>
-  </div>
-  <div class="tache-en-cour">
-      <span>en cours</span>
-  </div>
-</div>
-  <div class="description-tache">
-      <textarea name="desc" id="desc-tache" cols="30" rows="5">description</textarea>
-  </div>
-<div class="ligne-3">
-  <div class="terminer-1">
-      <span id="terminer"> <img src="img/validV.png" alt=""> terminer</span>
-  </div>
-  <div class="supprimer">
-      <img src="img/supprimer.png" alt="">
-  </div>
-</div>`
- */
+   //recuperer les donnees du localstorage
+   nouvelleTacheSON = localStorage.getItem('laNouvelleTache');
+   nouvelleTache = nouvelleTacheSON && JSON.Parse(nouvelleTacheSON);
