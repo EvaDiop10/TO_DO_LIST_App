@@ -43,6 +43,12 @@ main{
 {
     border: none;
 }
+.priorite_bloc{
+    width: 300px;
+}
+#recherche:focus{
+    outline: none;
+}
 .filtre
 {
     padding: 10px;
@@ -97,13 +103,18 @@ hr
     padding-top: 7px; 
 }
 
-.ligne-1-carte-tache
+.true{
+    background-color: #00C061;
+    display: none;
+}
+.affiche-taches
 {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 
 .carte-tache
@@ -112,6 +123,7 @@ hr
     padding: 20px 50px  ;
     border: 0.5px solid #e9e7e7;
     border-radius: 12px;
+    margin-bottom: 10px;
     
 }
 .lign-1
@@ -135,16 +147,31 @@ hr
     justify-content: space-between;
     padding: 8px;
 }
-.nom-tache 
+.tache 
 {
     font-weight: bolder;
 }
+.tache input{
+    border: none;
+    min-width: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.tache input:focus{
+    color: gray;
+    outline: none;
+    font-style: italic;
+    transition: 0.4s;
+}
+.detail-taches{
+    margin-top: -62px;
+}
+
 #planer
 {
     width: 30px;
     height: 30px;
 }
-
 .terminer-2
 {
     border: 1px solid #e2e2e2;
@@ -158,6 +185,12 @@ hr
     text-align: center;
     border-radius: 10px;
     padding: 10px;
+}
+.terminer-1:hover{
+    cursor: pointer;
+    background-color:#00C061;
+    color: white;
+    transition: 0.5s;
 }
 
 .form-ajout
@@ -186,4 +219,10 @@ hr
     background-color: #ffffff;
     padding: 8px;
     border-radius: 8px;
+}
+#descpar
+{
+    padding: 10px;
+    text-align: justify;
+    text-justify: auto;
 }

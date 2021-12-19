@@ -7,8 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="test.css">
 
-                            <!-- supabase link -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <title>Tâches</title>
 </head>
@@ -28,72 +30,88 @@
         </nav>
     </header>
     <main>
-        <section id="ma-section"></section>
-            <section class="detail-taches">
-                <div class="manage-tache">
-                    <div class="label shadow">
-                        <label for="recherche">
-                            <img src="img/loup.png" alt="" id="search">
-                            <input type="search" name="recherche" id="recherche" placeholder="Recherche par titre">
-                        </label>
-                    </div>
-                    <div class="filtre shadow">
-                        <img src="img/filtre.png" alt=""">
-                        <span>Filtre</span>
-                    </div>
-                    <button class="ajout-tache shadow" id="ajout" >
-                        <img src="img/tache.png" alt="">
-                        <span>Ajouter tâche</span>
-                    </button>
+        <section class="detail-taches">
+            <div class="manage-tache my-5">
+                <div class="label shadow">
+                    <label for="recherche">
+                        <img src="img/loup.png" alt="" id="search">
+                        <input type="search" name="recherche" id="recherche" placeholder="Recherche par titre">
+                    </label>
                 </div>
-                <hr>
-    <!----------------------partie form ajouter tache------------------>
-                <form class="pb-5 form-ajout" hidden id="myForm">
-                    <div class="mb-3">
-                        <label for="tacheTitre" class="form-label">Titre de la tache</label>
-                        <input type="text" class="form-control titre-tache" id="titre" aria-describedby="textlHelp">
-                        <div id="textelHelp" class="form-text">Je prévoie faire:</div>
+                <div class="filtre shadow">
+                    <img src="img/filtre.png" alt="">
+                    <span>Filtre</span>
+                </div>
+                <button class="ajout-tache shadow" id="ajout" >
+                    <img src="img/tache.png" alt="">
+                    <span>Ajouter tâche</span>
+                </button>
+            </div>
+                <!-- <hr> -->
+                    <!-----------partie form ajouter tache--------->
+                <form class="animate__animated animate__zoomIn  pb-5 form-ajout" hidden id="myForm">
+                    <div class="mb-3 ">
+                        <label for="titre" class="form-label">Titre de la tache</label>
+                        <input type="text" class="form-control titre-tache" id="titre">
+                        <!-- <div id="textelHelp" class="form-text">Je prévoie faire:</div> -->
                     </div>
                     <div class="mb-3">
-                        <label for="dateFin"  lass="form-label">Je dois le terminer avant le</label>
+                        <label for="date" lass="form-label">Je dois le terminer avant le</label>
                         <input type="datetime-local"  class="form-control date-fin" id="date">
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">je confirme</label>
+                    <div class="mb-3 ">
+                        <label for="priorite">Priorité</label>
+                        <select name="cars" id="priorite" class="form-control titre-tache">
+                            <option value="aucune">-- Aucune</option>
+                            <option value="faible">Faible</option>
+                            <option value="moyenne">Moyenne</option>
+                            <option value="haute">Haute</option>
+                          </select>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">description</label>
+                        <label for="description" class="form-label">Description</label>
                         <textarea class="form-control description"   id="description" rows="3"></textarea>
                     </div>
-                    <input type="submit" id="enregistre" class="btn btn-danger">
+                    <input type="submit" id="enregistrer" class="btn btn-danger">
                 </form>
     
-      <!---------------fffffffffffffffffffff-------------------------->
+                         <!-----fffffffffff-------->
     
                 <div class="etat-tache">
                     <div class="num-tache">
                         <img src="img/iconeTache.png" alt="">
-                        <span id="nbr-taches">25 tâches</span>
+                        <span id="nbr-taches"><strong id="Gt"></strong>  tâches</span>
                     </div>
                     <div class="tache-termine">
                         <img src="img/iconeTermine.png" alt="">
-                        <span id="tache-terminer">3 terminés</span>
+                        <span id="tache-terminer"><strong id="Ft"></strong> terminés</span>
                     </div>
                 </div>
             </section>
-
-            <script></script>
-        <section class="affiche-taches">
-            <div class="ligne-1-carte-tache">
-                <div class="carte-tache tache-0" id="1">
+            <section>
+                <div class="row mt-4">
+                    <div class="col-3"></div>
+                    <div class="col-3">
+                        <img src="img/true.png" alt="">
+                        <strong>Tache terminée</strong>
+                    </div>
+                    <div class="col-3">
+                        <img src="img/false.png" alt="">
+                        <strong>Tache en cours</strong>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </section>
+            <section class="affiche-taches">
+                
+                <!-- <div class="carte-tache tache-0" id="1">
                     <div class="lign-1">
                         <div class="date">
                             <img src="img/planner.png" alt="" id="planer">
                             <span id="date">07/dec/2021, 12h30 </span>
                         </div>
                         <div>
-                            <img src="img/rouge.png" alt="">
+                            <img src="img/true.png" alt="">
                         </div>
                     </div><hr id="trait-carte">
                     <div class="ligne-2">
@@ -115,109 +133,15 @@
                             <img src="img/supprimer.png" alt="">
                         </div>
                     </div>
-                </div>
-                <div class="carte-tache tache-1" id="2">
-                    <div class="lign-1">
-                        <div class="date">
-                            <img src="img/planner.png" alt="" id="planer">
-                            <span id="date">07/dec/2021, 12h30 </span>
-                        </div>
-                        <div>
-                            <img src="img/rouge.png" alt="">
-                        </div>
-                    </div><hr id="trait-carte">
-                    <div class="ligne-2">
-                        <div class="nom-tache">
-                            <span>Brief UML</span>
-                        </div>
-                        <div class="tache-en-cour">
-                            <span>en cours</span>
-                        </div>
-                    </div>
-                    <div class="description-tache">
-                        <textarea name="desc" id="desc-tache" cols="30" rows="5">description</textarea>
-                    </div>
-                    <div class="ligne-3">
-                        <div class="terminer-1">
-                            <span id="terminer"> <img src="img/validV.png" alt=""> terminer</span>
-                        </div>
-                        <div class="supprimer" >
-                            <img src="img/supprimer.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ligne-1-carte-tache">
-                <div class="carte-tache tache-2" id="3">
-                    <div class="lign-1">
-                        <div class="date">
-                            <img src="img/planner.png" alt="" id="planer">
-                            <span id="date">07/dec/2021, 12h30 </span>
-                        </div>
-                        <div>
-                            <img src="img/rouge.png" alt="">
-                        </div>
-                    </div>
-                    <hr id="trait-carte">
-                    <div class="ligne-2">
-                        <div class="nom-tache">
-                            <span>Brief Algorithme</span>
-                        </div>
-                        <div class="tache-en-cour">
-                            <span>en cours</span>
-                        </div>
-                    </div>
-                        <div class="description-tache">
-                            <textarea name="desc" id="desc-tache" cols="30" rows="5">description</textarea>
-                        </div>
-                    <div class="ligne-3">
-                        <div class="terminer-1">
-                            <span id="terminer"> <img src="img/validV.png" alt=""> terminer</span>
-                        </div>
-                        <div class="supprimer">
-                            <img src="img/supprimer.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="carte-tache tache-3" id="4">
-                    <div class="lign-1">
-                        <div class="date">
-                            <img src="img/planner.png" alt="" id="planer">
-                            <span id="date">07/dec/2021, 12h30 </span>
-                        </div>
-                        <div>
-                            <img src="img/vert.png" alt="">
-                        </div>
-                    </div>
-                    <hr id="trait-carte">
-                    <div class="ligne-2">
-                        <div class="nom-tache">
-                            <!-- <span id="nom-tache">Brief Algorithme</span> -->
-                        </div>
-                        <div class="tache-en-cour">
-                            <span>en cours</span>
-                        </div>
-                    </div>
-                    <div class="description-tache">
-                        <textarea name="desc" id="desc-tache" cols="30" rows="5">description</textarea>
-                    </div>
-                    <div class="ligne-3">
-                        <div class="terminer-2">
-                            <span id="terminer"> <img src="img/valideA.png" alt=""> terminer</span>
-                        </div>
-                        <div class="supprimer">
-                            <img src="img/supprimer.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div> -->
+            </section>
         </section>
     </main>
 
     <!-- <script type="module" src="api.js"></script> -->
-    <script src="delete.js" type="text/javascript"></script>
-   <script src="test.js"></script>     
-   <script src="../../myInsert.js"></script>
+    <script src="ZallScript.js" type="text/javascript"></script>
+   <!-- <script src="test.js"></script>      -->
+   <!-- <script src="../../myInsert.js"></script> -->
 </body>
 
 </html>
