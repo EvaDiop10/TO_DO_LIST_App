@@ -1,0 +1,207 @@
+body
+{
+    background-color: #f3f3f3df;
+    background:rgb(241, 240, 240);
+    
+}
+main{
+    margin: 0 auto;
+    width: 80%;
+    padding: 50px;
+}
+
+
+.barre-de-navigation{
+    background:#CE0033;
+    justify-content: space-between;
+}
+.recherche{
+    border-radius: 11px;
+}
+.line{
+    color: darkgray;
+    padding:1px;
+}
+
+
+
+#titre-1
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+.navigation
+{
+    background-color: #CE0033;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.manage-tache
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.label
+{
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    align-content: center;
+    background-color: #ffffff;
+    border: 0.5px solid #b1adada8;
+}
+.label #recherche
+{
+    border: none;
+}
+.filtre
+{
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: -12px;
+    border: 1px solid;
+    border-radius: 10px;
+    align-content: center; 
+    width: 200px;
+    background-color: #ffffff;
+    border: 0.5px solid #b1adadab;
+}
+.ajout-tache
+{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    align-content: center; 
+    width: 200px;  
+    background-color: #ffffff;
+    border: 0.5px solid #b1adad94;
+    background-color:#CE0033;
+    color: #ffffff;
+}
+hr
+{
+    background-color: #DEDEDE;
+    border: 2px solid #DEDEDE;
+    margin:40px auto;
+    width: 88%;   
+}
+.etat-tache
+{
+    background-color: #ffffff;
+    border-top: 0.5px solid rgba(184, 181, 181, 0.685);
+    border-bottom: 0.5px solid rgba(179, 176, 176, 0.623);
+    height: 50px;
+    display: flex;
+   
+}
+.etat-tache .num-tache
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+  
+}
+.etat-tache .tache-termine
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px; 
+}
+
+.ligne-1-carte-tache
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.carte-tache
+{
+    background-color: #ffffff;
+    padding: 20px 50px  ;
+    border: 0.5px solid #e9e7e7;
+    border-radius: 12px;
+    
+}
+.lign-1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+.ligne-2
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+.ligne-3
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+.nom-tache 
+{
+    font-weight: bolder;
+}
+#planer
+{
+    width: 30px;
+    height: 30px;
+}
+
+.terminer-2
+{
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.terminer-1
+{
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-ajout
+{
+  
+    background-color: #ce0034f3;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 12px;
+    margin: 20px auto;
+    width: 50%;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 21px;
+    box-shadow: 10px 10px rgb(10, 7, 7);
+    z-index: 1;
+    
+}
+
+.soummir
+{
+    background-color: rgb(255, 255, 255);
+}
+#priorite
+{
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+}
