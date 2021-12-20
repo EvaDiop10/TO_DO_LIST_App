@@ -41,6 +41,7 @@
                 <div class="filtre shadow">
                     <img src="img/filtre.png" alt="">
                     <span>Filtre</span>
+                    
                 </div>
                 <button class="ajout-tache shadow" id="ajout" >
                     <img src="img/tache.png" alt="">
@@ -66,7 +67,7 @@
                             <option value="faible">Faible</option>
                             <option value="moyenne">Moyenne</option>
                             <option value="haute">Haute</option>
-                          </select>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
@@ -76,7 +77,6 @@
                 </form>
     
                          <!-----fffffffffff-------->
-    
                 <div class="etat-tache">
                     <div class="num-tache">
                         <img src="img/iconeTache.png" alt="">
@@ -89,15 +89,21 @@
                 </div>
             </section>
             <section>
-                <div class="row mt-4">
-                    <div class="col-3"></div>
-                    <div class="col-3">
-                        <img src="img/true.png" alt="">
-                        <strong>Tache terminée</strong>
+                <div class="row mt-4 filt">
+                    <div class="col-3 text-end"><strong> Filtrer : </strong></div>
+                    <div class="col-3 " >
+                        <input type="checkbox" id="TaskDoing" class="checkbox">
+                        <label for="TaskDoing">
+                            <img src="img/true.png" alt="">
+                            <strong>Tache terminée</strong>
+                        </label>
                     </div>
                     <div class="col-3">
-                        <img src="img/false.png" alt="">
-                        <strong>Tache en cours</strong>
+                        <input type="checkbox" id="TaskDone" class="checkbox">
+                        <label for="TaskDone">
+                            <img src="img/false.png" alt="">
+                            <strong>Tache en cours</strong>
+                        </label>
                     </div>
                     <div class="col-3"></div>
                 </div>

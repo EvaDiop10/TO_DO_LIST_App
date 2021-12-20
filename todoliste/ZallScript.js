@@ -32,45 +32,44 @@ window.addEventListener('load', ()=>{
 
 })
 
-function CreateCarteIdee(donnees){
-   
+function CreateCarteIdee(data){
     Gt.innerHTML = ComptTaskTotal 
     Ft.innerHTML = CompTaskFinish
 
-    let idCarte = 'carte-'+donnees.id
-    let idBntFinish ='terminer-'+donnees.id  
-    let idBtnDelete = donnees.id
-    let idImgEtat = 'imgEtat'+donnees.id
-    let idDesc = 'desc-'+donnees.id
+    let idCarte = 'carte-' + data.id
+    let idBntFinish ='terminer-' + data.id  
+    let idBtnDelete = data.id
+    let idImgEtat = 'imgEtat' + data.id
+    let idDesc = 'desc-' + data.id
 
     document.querySelector('.affiche-taches').insertAdjacentHTML(
-        "beforeend",
+        "afterbegin",
         `
         <div class="carte-tache tache-0 animate__animated animate__flipInX" id="${idCarte}">
             <div class="lign-1">
                 <div class="date">
                     <img src="img/planner.png" alt="" id="planer">
-                    <span id="date">${donnees.echeance} </span>
+                    <span id="date">${data.echeance} </span>
                 </div>
                 <div >
-                    <img id="${idImgEtat}" src="img/${donnees.etat}.png" alt="">
+                    <img id="${idImgEtat}" src="img/${data.etat}.png" alt="">
                 </div>
             </div>
             <div class="tache-en-cour text-end">
-                <span>Prioroté : ${donnees.priority}</span>
-            </div>
-           
+                <span>
+                    Prioroté : ${data.priority}
+                </span>
+            </div>           
             <div class="ligne-2">
                 <div class="tache">
-                    <input type="text" value="${donnees.titre}">
+                    <input type="text" value="${data.titre}">
                 </div>
             </div>
             <div class="description-tache">
-                <textarea name="desc" id="${idDesc}" cols="30" rows="5">${donnees.description}</textarea>
+                <textarea name="desc" id="${idDesc}" cols="30" rows="5">${data.description}</textarea>
             </div>
             <div class="ligne-3">
-            
-                <div class="terminer-1 ${donnees.etat}" id="${idBntFinish}">
+                <div class="terminer-1 ${data.etat}" id="${idBntFinish}">
                     <span > <img src="img/validV.png" alt=""> terminer</span>
                 </div>
                 <div class="supprimer">
@@ -87,33 +86,37 @@ function CreateCarteIdee(donnees){
             description: dd.value
         }
 
-        UpdatIntoSupabase(donnees.id, UpdateIdee)
-      
+        UpdatIntoSupabase(data.id, UpdateIdee)
     })
 
     let btnTerminer = document.getElementById(idBntFinish)
         btnTerminer.addEventListener('click', ()=>{
         btnTerminer.style.display = 'none'
-
+                
+        CompTaskFinish = CompTaskFinish+1
+        Ft.innerHTML = CompTaskFinish
+      
         let img = document.getElementById(idImgEtat)
         img.setAttribute('src', 'img/true.png')
 
         let UpdateEtat = {
             etat: true
         }
-
-        UpdatIntoSupabase(donnees.id, UpdateEtat)
+        UpdatIntoSupabase(data.id, UpdateEtat)
     })
 
     let btnSupprimer = document.getElementById(idBtnDelete)
     btnSupprimer.addEventListener('click', ()=>{
+        
+        // alert('ok')
         document.getElementById(idCarte).remove()
+        DeleteTaskIntoSupabase(data.id)
     })
 }
 
 // ///////////////AJOUTER DES DONNÉES////////////////
 
-function AddDataIntoSupabase(NewObjet){
+function AddTaskIntoSupabase(NewObjet){
     fetch(api_url, {
         method: "POST",
         headers: {
@@ -131,14 +134,14 @@ function AddDataIntoSupabase(NewObjet){
 ///////SUPPRÉSSION DES DONNÉES///////////////////
 
 function DeleteTaskIntoSupabase (id){
-    fetch(api_url + "?id=eq." + id,{
+
+    fetch(`https://tenjvxuzssuicdopqfau.supabase.co/rest/v1/Todo?id=eq.${id}`,{
         method: "DELETE",
         headers:{
-         apikapi: api_key,
+         apikey: api_key,
          'Authorization' : `Bearer ${api_key}`
         }
     })
-    
 }
 
 ////////////MODIFICATION DES DONNÉES/////////////
@@ -184,8 +187,9 @@ function NewtaskInput(){
                     priority: inputSelectSelected,
                 }
                 CreateCarteIdee(NewTask)
-                AddDataIntoSupabase(NewTask)
+                AddTaskIntoSupabase(NewTask)
                 formulaire.hidden = true
+                ajouter.classList.add('animate__bounceOut');
             })
           return 
         }
