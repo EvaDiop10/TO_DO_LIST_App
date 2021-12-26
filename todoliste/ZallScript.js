@@ -41,6 +41,7 @@ function CreateCarteIdee(data){
     let idBtnDelete = data.id
     let idImgEtat = 'imgEtat' + data.id
     let idDesc = 'desc-' + data.id
+    let idTitle = 'title-' + data.id
 
     document.querySelector('.affiche-taches').insertAdjacentHTML(
         "afterbegin",
@@ -62,7 +63,7 @@ function CreateCarteIdee(data){
             </div>           
             <div class="ligne-2">
                 <div class="tache">
-                    <input type="text" value="${data.titre}">
+                    <input type="text" id = "${idTitle}" value="${data.titre}">
                 </div>
             </div>
             <div class="description-tache">
@@ -79,14 +80,28 @@ function CreateCarteIdee(data){
         </div>
         `
       )
+    let UpdateIdee = {}
+    let inputEditDesc = document.getElementById(idDesc)
+    
+    inputEditDesc.addEventListener('blur', ()=>{
+        
+        UpdateIdee.pop( {
+            description: inputEditDesc.value
+        })
 
-    let dd = document.getElementById(idDesc)
-    dd.addEventListener('blur', ()=>{
-        let UpdateIdee = {
-            description: dd.value
+        // UpdatIntoSupabase(data.id, UpdateIdee)
+    })
+    let inputEditTitle = document.getElementById(idTitle)
+    
+    inputEditTitle.addEventListener('blur', ()=>{
+        
+        UpdateIdee = {
+            titre: inputEditTitle.value
         }
+        console.log(UpdateIdee)
 
-        UpdatIntoSupabase(data.id, UpdateIdee)
+
+        // UpdatIntoSupabase(data.id, UpdateIdee)
     })
 
     let btnTerminer = document.getElementById(idBntFinish)
